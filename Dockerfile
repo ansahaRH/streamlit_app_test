@@ -1,18 +1,16 @@
-#Python Image
-FROM python3:9-slim
+FROM ubuntu:18.04
+
 
 # Set working directory
 WORKDIR /app
 
 
-RUN apt-get update && apt-get install -y \
-    build-essential \
-    curl \
-    software-properties-common \
-    git \
-    && rm -rf /var/lib/apt/lists/*
+RUN apt-get update &&\
+    apt-get install python3.7 -y &&\
+    apt-get install python3-pip -y &&\
+    apt-get install graphviz -y
 
-RUN git clone https://github.com/streamlit/streamlit-example.git .
+RUN git clone https://github.com/ansahaRH/streamlit_app_test.git .
 
 #Copy the requirements file into a container
 COPY requirements.txt .
