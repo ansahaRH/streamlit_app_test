@@ -9,4 +9,4 @@ RUN echo "Installing softwares and packages" && \
 
 # CMD ["streamlit","run","menu_demo.py"]
 
-CMD ["streamlit", "run", "--server.port 8080", "menu_demo.py"]
+CMD ["streamlit", "run", "menu_demo.py"]
