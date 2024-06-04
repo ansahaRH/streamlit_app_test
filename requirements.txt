@@ -3,3 +3,4 @@ numpy
 matplotlib
 streamlit
 altair
+streamlit_option_menu
